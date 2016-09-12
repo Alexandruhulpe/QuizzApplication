@@ -1,14 +1,19 @@
 package au.id.swalladge.quiz_android;
 
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import java.util.Objects;
 
 public class QuizQuestion extends AppCompatActivity {
     Integer questionNumber;
+    public static final String PREFS_NAME = "data";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,7 +22,6 @@ public class QuizQuestion extends AppCompatActivity {
 
         Bundle data = this.getIntent().getExtras();
         displayQuestion(data.getInt("questionNumber"));
-
     }
 
     /**
@@ -44,6 +48,7 @@ public class QuizQuestion extends AppCompatActivity {
         t.setText(String.format(getString(R.string.questionNumber), n, getString(R.string.totalQuestions)));
 
         String q = String.format("q%d%%s",n);
+        String questionID = String.format("q%d", n);
         String question = getString(getResources().getIdentifier(String.format(q,""),"string", this.getPackageName()));
         ((TextView) findViewById(R.id.qDescription)).setText(question);
 
@@ -58,8 +63,11 @@ public class QuizQuestion extends AppCompatActivity {
             RadioButton r = (RadioButton) findViewById(getResources().getIdentifier(optID, "id", this.getPackageName()));
             r.setText(getResources().getIdentifier(rID, "string", this.getPackageName()));
             r.setChecked(false);
-            // TODO: set radio button selected if saved answer
+
         }
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        RadioButton r = (RadioButton) findViewById(getResources().getIdentifier(settings.getString(questionID, "opt0"), "id", this.getPackageName()));
+        r.setChecked(true);
     }
 
     /**
@@ -67,8 +75,11 @@ public class QuizQuestion extends AppCompatActivity {
      * @param n
      */
     private void saveAnswer(Integer n) {
-        // TODO
-        // save to database somewhere
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        RadioGroup r = (RadioGroup) findViewById(R.id.options);
+        editor.putString(String.format("q%d",n), getResources().getResourceEntryName(r.getCheckedRadioButtonId()));
+        editor.commit();
     }
 
     /**

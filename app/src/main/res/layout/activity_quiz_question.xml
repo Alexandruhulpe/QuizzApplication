@@ -22,7 +22,8 @@
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/questionNumber"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -30,12 +31,14 @@
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="question description placeholder"
             android:id="@+id/qDescription"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="20dp" />
 
         <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp">
+            android:paddingLeft="20dp"
+            android:id="@+id/options">
         <RadioButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
