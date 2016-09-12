@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/app_desc"
+            android:text="@string/appDesc"
             android:id="@+id/textView"
             android:paddingTop="10dp"
             android:textAlignment="center"
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/zero_percent"
+                android:text="@string/zeroPercent"
                 android:id="@+id/highscore_percent"
                 android:textAlignment="center"
                 android:password="false"
@@ -76,7 +76,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/reset_quiz"
+                android:text="@string/resetQuiz"
                 android:id="@+id/button"
                 android:nestedScrollingEnabled="false"
                 android:onClick="resetAnswers" />
@@ -84,7 +84,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/take_quiz"
+                android:text="@string/takeQuiz"
                 android:id="@+id/take_quiz_btn"
                 android:layout_gravity="right"
                 android:onClick="takeQuiz" />

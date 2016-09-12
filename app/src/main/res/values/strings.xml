@@ -1,14 +1,30 @@
 <resources>
-    <string name="app_name">quiz-android</string>
+    <string name="appName">quiz-android</string>
     <string name="title">The Quiz</string>
-    <string name="app_desc">Test your knowledge of the World\'s capital cities!</string>
-    <string name="take_quiz">Take the Quiz!</string>
-    <string name="reset_quiz">Reset Saved Answers</string>
+    <string name="appDesc">Test your knowledge of the World\'s capital cities!</string>
+    <string name="takeQuiz">Take the Quiz!</string>
+    <string name="resetQuiz">Reset Saved Answers</string>
     <string name="highscore">Highscore: </string>
-    <string name="zero_percent">0%</string>
-    <string name="questionNumber">Question %s</string>
+    <string name="zeroPercent">0%</string>
+    <string formatted="false" name="questionNumber">Question %s/%s</string>
     <string name="previousButton">Previous</string>
     <string name="NextButton">Next</string>
     <string name="submitButton">Submit</string>
     <string name="dontKnow">I don\'t know.</string>
+
+    <!-- quiz information and questions -->
+    <string name="totalQuestions">2</string>
+    <string name="q1">What is the capital city of Ghana?</string>
+    <string name="q1opt1">Abzurbistan</string>
+    <string name="q1opt2">Accra</string>
+    <string name="q1opt3">Avalon</string>
+    <string name="q1opt4">Attleboro</string>
+    <string name="q1correct">opt2</string>
+
+    <string name="q2">What is the capital city of Greece?</string>
+    <string name="q2opt1">Vienna</string>
+    <string name="q2opt2">Volos</string>
+    <string name="q2opt3">Athens</string>
+    <string name="q2opt4">Sparta</string>
+    <string name="q2correct">opt3</string>
 </resources>
