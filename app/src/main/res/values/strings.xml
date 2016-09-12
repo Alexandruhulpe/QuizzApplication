@@ -6,4 +6,9 @@
     <string name="reset_quiz">Reset Saved Answers</string>
     <string name="highscore">Highscore: </string>
     <string name="zero_percent">0%</string>
+    <string name="questionNumber">Question %s</string>
+    <string name="previousButton">Previous</string>
+    <string name="NextButton">Next</string>
+    <string name="submitButton">Submit</string>
+    <string name="dontKnow">I don\'t know.</string>
 </resources>

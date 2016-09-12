@@ -1,5 +1,6 @@
 package au.id.swalladge.quiz_android;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,7 +30,16 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void takeQuiz(View view) {
-        // TODO
-        // run the quiz question activity
+
+        // set up the data to send
+        Bundle data = new Bundle();
+        data.putInt("questionNumber", 1);
+
+        // make the intent
+        Intent quiz = new Intent(this, QuizQuestion.class);
+
+        // add the data and start the activity
+        quiz.putExtras(data);
+        startActivity(quiz);
     }
 }
