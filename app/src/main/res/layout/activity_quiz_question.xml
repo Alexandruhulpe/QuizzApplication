@@ -111,5 +111,15 @@
                 android:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
 
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/backToMenu"
+            android:id="@+id/backtomenu"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/colorPrimary"
+            android:onClick="backToMenu" />
+
     </LinearLayout>
 </RelativeLayout>

@@ -11,6 +11,7 @@
     <string name="NextButton">Next</string>
     <string name="submitButton">Submit</string>
     <string name="dontKnow">I don\'t know.</string>
+    <string name="backToMenu">Back to Menu</string>
 
     <!-- quiz information and questions -->
     <string name="totalQuestions">2</string>

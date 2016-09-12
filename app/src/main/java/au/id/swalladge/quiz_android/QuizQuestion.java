@@ -110,4 +110,12 @@ public class QuizQuestion extends Activity {
         // tally results
         // switch to results activity
     }
+
+    /**
+     * return to the main screen
+     * @param view
+     */
+    public void backToMenu(View view) {
+        finish();
+    }
 }
