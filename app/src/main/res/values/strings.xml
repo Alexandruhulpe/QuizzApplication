@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">quiz-android</string>
+    <string name="title">The Quiz</string>
+    <string name="app_desc">Test your knowledge of the World\'s capital cities!</string>
+    <string name="take_quiz">Take the Quiz!</string>
+    <string name="reset_quiz">Reset Saved Answers</string>
+    <string name="highscore">Highscore: </string>
+    <string name="zero_percent">0%</string>
 </resources>
