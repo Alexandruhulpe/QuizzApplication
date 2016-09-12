@@ -1,7 +1,7 @@
 package au.id.swalladge.quiz_android;
 
+import android.app.Activity;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +11,7 @@ import android.widget.TextView;
 
 import java.util.Objects;
 
-public class QuizQuestion extends AppCompatActivity {
+public class QuizQuestion extends Activity {
     Integer questionNumber;
     public static final String PREFS_NAME = "data";
 

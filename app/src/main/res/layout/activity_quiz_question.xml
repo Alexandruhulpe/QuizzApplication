@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="au.id.swalladge.quiz_android.QuizQuestion">
+    tools:context="au.id.swalladge.quiz_android.QuizQuestion"
+    android:background="@color/colorAccent">
 
     <LinearLayout
         android:orientation="vertical"
@@ -23,7 +24,8 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/questionNumber"
             android:layout_gravity="center_horizontal"
-            android:paddingBottom="10dp" />
+            android:paddingBottom="10dp"
+            android:text="Question #" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -43,32 +45,38 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
-            android:id="@+id/opt1" />
+            android:id="@+id/opt1"
+            android:buttonTint="@color/colorPrimaryDark" />
 
         <RadioButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
-            android:id="@+id/opt2" />
+            android:id="@+id/opt2"
+            android:buttonTint="@color/colorPrimaryDark" />
 
         <RadioButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="New RadioButton"
-            android:id="@+id/opt3" />
+            android:id="@+id/opt3"
+            android:buttonTint="@color/colorPrimaryDark" />
 
             <RadioButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New RadioButton"
-                android:id="@+id/opt4" />
+                android:id="@+id/opt4"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:buttonTint="@color/colorPrimaryDark" />
 
             <RadioButton
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/dontKnow"
             android:id="@+id/opt0"
-            android:checked="true" />
+            android:checked="true"
+                android:buttonTint="@color/colorPrimaryDark" />
 </RadioGroup>
         <LinearLayout
             android:orientation="horizontal"
@@ -83,21 +91,24 @@
                 android:text="@string/previousButton"
                 android:id="@+id/previousBtn"
                 android:layout_gravity="center_horizontal"
-                android:onClick="previous" />
+                android:onClick="previous"
+                android:backgroundTint="@color/colorPrimary" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/submitButton"
                 android:id="@+id/submitBtn"
-                android:onClick="submit" />
+                android:onClick="submit"
+                android:backgroundTint="@color/colorPrimary" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/NextButton"
                 android:id="@+id/nextBtn"
-                android:onClick="next" />
+                android:onClick="next"
+                android:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
 
     </LinearLayout>

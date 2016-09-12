@@ -1,12 +1,15 @@
 package au.id.swalladge.quiz_android;
 
+import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.RadioGroup;
 
 // main activity is where most of the stuff is
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Activity {
+    public static final String PREFS_NAME = "data";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +23,16 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void resetAnswers(View view) {
-        // TODO
-        // connect to database/wherever answers are saved
-        // and reset to default
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+
+        Integer total = Integer.parseInt(getString(R.string.totalQuestions));
+        for (int i=1; i<=total; ++i) {
+            RadioGroup r = (RadioGroup) findViewById(R.id.options);
+            editor.remove(String.format("q%d",i));
+        }
+
+        editor.commit();
     }
 
     /**
