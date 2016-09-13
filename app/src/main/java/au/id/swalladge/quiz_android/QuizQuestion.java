@@ -124,7 +124,6 @@ public class QuizQuestion extends Activity {
                         Intent results = new Intent(QuizQuestion.this, QuizResults.class);
                         startActivity(results);
                     }
-
                 })
                 .setNegativeButton(android.R.string.no, null)
                 .show();

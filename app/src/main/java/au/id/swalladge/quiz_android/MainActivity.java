@@ -1,6 +1,8 @@
 package au.id.swalladge.quiz_android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -38,16 +40,28 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void resetAnswers(View view) {
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle(getString(R.string.resetAnsConfirmTitle))
+                .setMessage(getString(R.string.resetAnsConfirmMessage))
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences.Editor editor = settings.edit();
 
-        int total = getResources().obtainTypedArray(R.array.questions).length();
-        for (int i=1; i<=total; ++i) {
-            RadioGroup r = (RadioGroup) findViewById(R.id.options);
-            editor.remove(String.format("q%d",i));
-        }
+                        int total = getResources().obtainTypedArray(R.array.questions).length();
+                        for (int i=1; i<=total; ++i) {
+                            RadioGroup r = (RadioGroup) findViewById(R.id.options);
+                            editor.remove(String.format("q%d",i));
+                        }
 
-        editor.apply();
+                        editor.apply();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .show();
     }
 
     /**
@@ -81,12 +95,24 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void resetHighscore(View view) {
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        editor.putFloat("highscore", 0);
-        editor.apply();
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle(getString(R.string.resetHighConfirmTitle))
+                .setMessage(getString(R.string.resetHighConfirmMessage))
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+                        SharedPreferences.Editor editor = settings.edit();
+                        editor.putFloat("highscore", 0);
+                        editor.apply();
 
-        // redraw the highscore since it may have changed
-        draw();
+                        // redraw the highscore since it may have changed
+                        draw();
+                    }
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .show();
     }
 }

@@ -12,8 +12,12 @@
     <string name="dontKnow">I don\'t know.</string>
     <string name="backToMenu">Back to Menu</string>
     <string name="submitConfirmTitle">Confirm Submission</string>
-    <string name="submitConfirmMessage">Are you sure you wish to submit?</string>
+    <string name="submitConfirmMessage">Really submit your answers for marking?</string>
     <string name="aboutBtn">About</string>
+    <string name="resetAnsConfirmTitle">Reset Saved Answers</string>
+    <string name="resetAnsConfirmMessage">Really reset your saved answers?</string>
+    <string name="resetHighConfirmTitle">Reset Highscore</string>
+    <string name="resetHighConfirmMessage">Really reset your highscore?</string>
 
     <!-- format strings for displaying scores and such -->
     <string name="resultsTitle" formatted="false">Score: %.2f%%</string>
