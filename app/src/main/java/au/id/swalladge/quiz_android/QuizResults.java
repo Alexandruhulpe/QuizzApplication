@@ -44,6 +44,7 @@ public class QuizResults extends AppCompatActivity {
 
             // question title
             TextView title = new TextView(this);
+            title.setPadding(0, 20, 0, 10);
             title.setText(String.format(getString(R.string.questionNumberSingle), i+1));
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                 title.setTextAppearance(android.R.style.TextAppearance_Large);
@@ -55,11 +56,19 @@ public class QuizResults extends AppCompatActivity {
             desc.setText(question[0]);
             container.addView(desc);
 
-            // TODO: fill placeholder with real thing
+            // your answer
             TextView yours = new TextView(this);
-            yours.setText(String.format(getString(R.string.youAnswered), answered));
+            int index = Integer.parseInt(answered.substring(3));
+            String answerText;
+            if (index == 0) {
+                answerText = getString(R.string.dontKnow);
+            } else {
+                answerText = question[index];
+            }
+            yours.setText(String.format(getString(R.string.youAnswered), answerText));
             container.addView(yours);
 
+            // add either the correct answer or a message saying it was correct
             if (Objects.equals(question[5], answered)) {
                 TextView correct = new TextView(this);
                 correct.setText(getString(R.string.correct));
@@ -69,7 +78,8 @@ public class QuizResults extends AppCompatActivity {
                 ++score;
             } else {
                 TextView incorrect = new TextView(this);
-                incorrect.setText(question[5]);
+                index = Integer.parseInt(question[5].substring(3));
+                incorrect.setText(String.format(getString(R.string.incorrect), question[index]));
                 container.addView(incorrect);
             }
         }

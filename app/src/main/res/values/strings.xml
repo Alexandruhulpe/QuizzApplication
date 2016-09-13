@@ -27,6 +27,7 @@
     <string name="questionNumber" formatted="false">Question %s/%s</string>
     <string name="questionNumberSingle" formatted="false">Question %s</string>
     <string name="youAnswered" formatted="false">You answered: %s</string>
+    <string name="incorrect" formatted="false">Correct answer: %s</string>
 
     <!-- quiz information and questions -->
 
