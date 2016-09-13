@@ -1,6 +1,8 @@
 package au.id.swalladge.quiz_android;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -110,11 +112,22 @@ public class QuizQuestion extends Activity {
         // must save the current answer first!
         saveAnswer(questionNumber);
 
-        // TODO: ask for confirmation (dialog popup)
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle(getString(R.string.submitConfirmTitle))
+                .setMessage(getString(R.string.submitConfirmMessage))
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // switch to the results activity (that also handles score tally and highscores)
+                        Intent results = new Intent(QuizQuestion.this, QuizResults.class);
+                        startActivity(results);
+                    }
 
-        // switch to the results activity (that also handles score tally and highscores)
-        Intent results = new Intent(this, QuizResults.class);
-        startActivity(results);
+                })
+                .setNegativeButton(android.R.string.no, null)
+                .show();
     }
 
     /**
