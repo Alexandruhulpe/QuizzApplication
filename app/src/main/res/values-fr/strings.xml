@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="NextButton">Suivant</string>
+    <string name="aboutBtn">À Propos</string>
+    <string name="backToMenu">Retour au menu</string>
+    <string name="dontKnow">Je ne sais pas.</string>
+    <string name="submitButton">Soumettre</string>
+    <string name="submitConfirmTitle">Confirmer la remise</string>
+    <string name="resetHighConfirmTitle">Remettre le record</string>
+    <string name="resetHighscoreBtn">Remettre le record</string>
+    <string name="takeQuiz">Commencer le Quiz !</string>
+    <string name="title">Le Quiz</string>
+    <string name="previousButton">Avant</string>
+    <string name="appDesc">Evaluer vos connaissances des capitales de la monde !</string>
+    <string name="appName">Le Quiz</string>
+    <string name="submitConfirmMessage">Vous êtes sur ?</string>
+    <string name="resultsDesc">Votre résultat et vos résultats pour chaque question.</string>
+    <string name="resetQuiz">Remettre les réponses sauvées</string>
+    <string name="newHighscore">Nouveau record !</string>
+    <string name="correct">Correct !</string>
+    <string name="resetHighConfirmMessage">Vraiment remettre le record ?</string>
+    <string name="resetAnsConfirmTitle">Remettre les réponses sauvées</string>
+    <string name="resetAnsConfirmMessage">Vraiment remettre les réponses sauvées ?</string>
+
+    <string formatted="false" name="highscore">Record : %.1f%%</string>
+    <string formatted="false" name="incorrect">La bonne réponse : %s</string>
+    <string formatted="false" name="youAnswered">Votre Réponse : %s</string>
+    <string formatted="false" name="questionNumberSingle">Question %d</string>
+    <string formatted="false" name="resultsTitle">Résultat : %.1f%%</string>
+    <string formatted="false" name="questionNumber">Question %d / %d</string>
+
+    <string-array name="q1">
+        <item>Quelle est la capitale de la Grèce ?</item>
+        <item>Vienne</item>
+        <item>Volos</item>
+        <item>Athènes</item>
+        <item>Sparte</item>
+        <item>opt3</item>
+    </string-array>
+
+    <string-array name="q2">
+        <item>Quelle est la capitale du Ghana ?</item>
+        <item>Abzurbistan</item>
+        <item>Accra</item>
+        <item>Avalone</item>
+        <item>Attleboro</item>
+        <item>opt2</item>
+    </string-array>
+
+</resources>

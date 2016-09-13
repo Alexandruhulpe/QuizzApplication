@@ -1,7 +1,7 @@
 <resources>
 
     <!-- general strings -->
-    <string name="appName">quiz-android</string>
+    <string name="appName">The Quiz</string>
     <string name="title">The Quiz</string>
     <string name="appDesc">Test your knowledge of the World\'s capital cities!</string>
     <string name="takeQuiz">Take the Quiz!</string>

@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
-            android:src="@mipmap/banner"
+            android:src="@drawable/banner"
             android:contentDescription="@string/title" />
 
         <TextView

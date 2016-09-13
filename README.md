@@ -17,7 +17,8 @@ Simple quiz app for testing your knowledge on capital cities.
 
 ## TODO
 
-- see TODO's throughout code for more
-
+- webview for displaying information + links
+- more questions
+- launcher icon
 
 
