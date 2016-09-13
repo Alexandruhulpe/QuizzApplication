@@ -1,6 +1,7 @@
 package au.id.swalladge.quiz_android;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -12,7 +13,7 @@ import android.widget.TextView;
 import java.util.Objects;
 
 public class QuizQuestion extends Activity {
-    Integer questionNumber;
+    int questionNumber;
     public static final String PREFS_NAME = "data";
 
     @Override
@@ -28,7 +29,7 @@ public class QuizQuestion extends Activity {
      * displays the question for the question number
      * @param n
      */
-    private void displayQuestion(Integer n) {
+    private void displayQuestion(int n) {
         questionNumber = n;
 
         // disable/enable buttons
@@ -57,7 +58,7 @@ public class QuizQuestion extends Activity {
         ((RadioButton) findViewById(R.id.opt0)).setChecked(true);
 
         // TODO: use string array in resources to optimize this
-        for (Integer i=1; i<5; ++i) {
+        for (int i=1; i<5; ++i) {
             String optID = String.format("opt%d", i);
             String rID = String.format(q, optID);
             RadioButton r = (RadioButton) findViewById(getResources().getIdentifier(optID, "id", this.getPackageName()));
@@ -74,7 +75,7 @@ public class QuizQuestion extends Activity {
      * saves the selected answer to the question number given
      * @param n
      */
-    private void saveAnswer(Integer n) {
+    private void saveAnswer(int n) {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
         RadioGroup r = (RadioGroup) findViewById(R.id.options);
@@ -105,10 +106,14 @@ public class QuizQuestion extends Activity {
      * @param view
      */
     public void submit(View view) {
-        // TODO
-        // ask for confirmation (dialog popup)
-        // tally results
-        // switch to results activity
+        // must save the current answer first!
+        saveAnswer(questionNumber);
+
+        // TODO: ask for confirmation (dialog popup)
+
+        // switch to the results activity (that also handles score tally and highscores)
+        Intent results = new Intent(this, QuizResults.class);
+        startActivity(results);
     }
 
     /**

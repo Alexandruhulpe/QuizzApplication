@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 // main activity is where most of the stuff is
 public class MainActivity extends Activity {
@@ -16,6 +17,11 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // display highscore here
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        double highscore = settings.getFloat("highscore", 0);
+        String textScore = String.format(getString(R.string.highscore), highscore);
+        ((TextView) findViewById(R.id.highscore)).setText(textScore);
     }
 
     /**
@@ -26,7 +32,7 @@ public class MainActivity extends Activity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        Integer total = Integer.parseInt(getString(R.string.totalQuestions));
+        int total = Integer.parseInt(getString(R.string.totalQuestions));
         for (int i=1; i<=total; ++i) {
             RadioGroup r = (RadioGroup) findViewById(R.id.options);
             editor.remove(String.format("q%d",i));

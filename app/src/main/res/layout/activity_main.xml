@@ -37,35 +37,15 @@
             android:textAlignment="center"
             android:textIsSelectable="true" />
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/highscore"
+            android:id="@+id/highscore"
             android:layout_gravity="center_horizontal"
-            android:padding="10dp"
-            android:showDividers="middle|beginning|end|none"
-            android:gravity="center">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/highscore"
-                android:id="@+id/textView2"
-                android:textAlignment="center" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:text="@string/zeroPercent"
-                android:id="@+id/highscore_percent"
-                android:textAlignment="center"
-                android:password="false"
-                android:typeface="monospace"
-                android:paddingLeft="10dp" />
-
-        </LinearLayout>
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" />
 
         <LinearLayout
             android:orientation="horizontal"
