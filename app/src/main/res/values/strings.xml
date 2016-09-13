@@ -3,7 +3,7 @@
     <!-- general strings -->
     <string name="appName">The Quiz</string>
     <string name="title">The Quiz</string>
-    <string name="appDesc">Test your knowledge of the World\'s capital cities!</string>
+    <string name="appDesc">Test your knowledge of the World\'s capital cities with this short quiz!</string>
     <string name="takeQuiz">Take the Quiz!</string>
     <string name="resetQuiz">Reset Saved Answers</string>
     <string name="previousButton">Previous</string>
@@ -12,12 +12,12 @@
     <string name="dontKnow">I don\'t know.</string>
     <string name="backToMenu">Back to Menu</string>
     <string name="submitConfirmTitle">Confirm Submission</string>
-    <string name="submitConfirmMessage">Really submit your answers for marking?</string>
+    <string name="submitConfirmMessage">Are you sure?</string>
     <string name="aboutBtn">About</string>
     <string name="resetAnsConfirmTitle">Reset Saved Answers</string>
     <string name="resetAnsConfirmMessage">Really reset your saved answers?</string>
     <string name="resetHighConfirmTitle">Reset Highscore</string>
-    <string name="resetHighConfirmMessage">Really reset your highscore?</string>
+    <string name="resetHighConfirmMessage">Really reset the highscore?</string>
     <string name="resetHighscoreBtn">Reset Highscore</string>
     <string name="correct">Correct!</string>
     <string name="newHighscore">New Highscore!</string>
