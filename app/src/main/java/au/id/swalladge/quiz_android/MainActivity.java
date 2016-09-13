@@ -19,6 +19,13 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        draw();
+    }
+
+    /**
+     * helper method to draw things like the highscore to the main screen
+     */
+    private void draw() {
         // display highscore here
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         double highscore = settings.getFloat("highscore", 0);
@@ -40,7 +47,7 @@ public class MainActivity extends Activity {
             editor.remove(String.format("q%d",i));
         }
 
-        editor.commit();
+        editor.apply();
     }
 
     /**
@@ -59,5 +66,27 @@ public class MainActivity extends Activity {
         // add the data and start the activity
         quiz.putExtras(data);
         startActivity(quiz);
+    }
+
+    /**
+     * display information about the app + links, etc.
+     * @param view
+     */
+    public void about(View view) {
+        // TODO: display webview with about/readme information
+    }
+
+    /**
+     * resets the highscore back to zero
+     * @param view
+     */
+    public void resetHighscore(View view) {
+        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        SharedPreferences.Editor editor = settings.edit();
+        editor.putFloat("highscore", 0);
+        editor.apply();
+
+        // redraw the highscore since it may have changed
+        draw();
     }
 }

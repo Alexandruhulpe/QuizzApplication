@@ -55,23 +55,54 @@
             android:baselineAligned="false">
 
             <Button
+                style="?android:attr/buttonStyleSmall"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/resetQuiz"
-                android:id="@+id/button"
-                android:nestedScrollingEnabled="false"
-                android:onClick="resetAnswers"
+                android:text="@string/aboutBtn"
+                android:id="@+id/aboutButton"
+                android:onClick="about"
                 android:backgroundTint="@color/colorPrimary" />
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/takeQuiz"
-                android:id="@+id/take_quiz_btn"
+                android:id="@+id/takeQuizButton"
                 android:layout_gravity="right"
                 android:onClick="takeQuiz"
                 android:backgroundTint="@color/colorPrimary" />
 
         </LinearLayout>
+
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:gravity="center">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resetHighscoreBtn"
+            android:id="@+id/resetScoreButton"
+            android:onClick="resetHighscore"
+            android:backgroundTint="@color/colorPrimary" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/resetQuiz"
+            android:id="@+id/resetQuizButton"
+            android:nestedScrollingEnabled="false"
+            android:onClick="resetAnswers"
+            android:backgroundTint="@color/colorPrimary" />
+    </LinearLayout>
+
 </RelativeLayout>

@@ -83,7 +83,7 @@ public class QuizQuestion extends Activity {
         SharedPreferences.Editor editor = settings.edit();
         RadioGroup r = (RadioGroup) findViewById(R.id.options);
         editor.putString(String.format("q%d",n), getResources().getResourceEntryName(r.getCheckedRadioButtonId()));
-        editor.commit();
+        editor.apply();
     }
 
     /**
