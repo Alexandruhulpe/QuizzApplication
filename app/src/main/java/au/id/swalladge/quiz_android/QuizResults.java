@@ -4,9 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -33,17 +35,42 @@ public class QuizResults extends AppCompatActivity {
         double total = questions.length();
         double score = 0;
 
+        LinearLayout container = (LinearLayout) findViewById(R.id.resultsContainer);
+
         // iterate over questions and process each
         for (int i=0; i<total; ++i) {
             String answered = settings.getString(String.format("q%d", i+1),"opt0");
             String[] question = res.getStringArray(questions.getResourceId(i, -1));
 
-            // TODO: add to UI
+            // question title
+            TextView title = new TextView(this);
+            title.setText(String.format(getString(R.string.questionNumberSingle), i+1));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                title.setTextAppearance(android.R.style.TextAppearance_Large);
+            }
+            container.addView(title);
+
+            // question itself
+            TextView desc = new TextView(this);
+            desc.setText(question[0]);
+            container.addView(desc);
+
+            // TODO: fill placeholder with real thing
+            TextView yours = new TextView(this);
+            yours.setText(String.format(getString(R.string.youAnswered), answered));
+            container.addView(yours);
+
             if (Objects.equals(question[5], answered)) {
+                TextView correct = new TextView(this);
+                correct.setText(getString(R.string.correct));
+                container.addView(correct);
+
                 // add to score if correct
                 ++score;
             } else {
-                // don't add to score
+                TextView incorrect = new TextView(this);
+                incorrect.setText(question[5]);
+                container.addView(incorrect);
             }
         }
 
