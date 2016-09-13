@@ -25,7 +25,7 @@
             android:id="@+id/questionNumber"
             android:layout_gravity="center_horizontal"
             android:paddingBottom="10dp"
-            android:text="Question #" />
+            android:text="@string/questionNumber" />
 
         <TextView
             android:layout_width="wrap_content"

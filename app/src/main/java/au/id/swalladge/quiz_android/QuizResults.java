@@ -93,7 +93,17 @@ public class QuizResults extends AppCompatActivity {
 
         // save the score
         if (score > settings.getFloat("highscore", 0)) {
-            // TODO: new highscore message in UI
+            // display highscore message in UI
+            TextView highscoreText = new TextView(this);
+            highscoreText.setPadding(0, 20, 0, 10);
+            highscoreText.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            highscoreText.setText(getString(R.string.newHighscore));
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                highscoreText.setTextAppearance(android.R.style.TextAppearance_Large);
+            }
+            container.addView(highscoreText, 0);
+
+            // save highscore
             SharedPreferences.Editor editor = settings.edit();
             editor.putFloat("highscore", (float) score);
             editor.apply();

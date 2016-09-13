@@ -20,12 +20,14 @@
     <string name="resetHighConfirmMessage">Really reset your highscore?</string>
     <string name="resetHighscoreBtn">Reset Highscore</string>
     <string name="correct">Correct!</string>
+    <string name="newHighscore">New Highscore!</string>
+    <string name="resultsDesc">Your score and individual question results.</string>
 
     <!-- format strings for displaying scores and such -->
-    <string name="resultsTitle" formatted="false">Score: %.2f%%</string>
-    <string name="highscore" formatted="false">Highscore: %.2f%%</string>
-    <string name="questionNumber" formatted="false">Question %s/%s</string>
-    <string name="questionNumberSingle" formatted="false">Question %s</string>
+    <string name="resultsTitle" formatted="false">Score: %.1f%%</string>
+    <string name="highscore" formatted="false">Highscore: %.1f%%</string>
+    <string name="questionNumber" formatted="false">Question %d/%d</string>
+    <string name="questionNumberSingle" formatted="false">Question %d</string>
     <string name="youAnswered" formatted="false">You answered: %s</string>
     <string name="incorrect" formatted="false">Correct answer: %s</string>
 
