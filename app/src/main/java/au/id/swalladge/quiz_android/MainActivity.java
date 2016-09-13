@@ -3,6 +3,8 @@ package au.id.swalladge.quiz_android;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RadioGroup;
@@ -32,7 +34,7 @@ public class MainActivity extends Activity {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
 
-        int total = Integer.parseInt(getString(R.string.totalQuestions));
+        int total = getResources().obtainTypedArray(R.array.questions).length();
         for (int i=1; i<=total; ++i) {
             RadioGroup r = (RadioGroup) findViewById(R.id.options);
             editor.remove(String.format("q%d",i));

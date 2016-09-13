@@ -3,6 +3,7 @@ package au.id.swalladge.quiz_android;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.RadioGroup;
@@ -23,19 +24,21 @@ public class QuizResults extends AppCompatActivity {
 
     protected void displayResults() {
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
+        Resources res = getResources();
 
-        double total = Integer.parseInt(getString(R.string.totalQuestions));
+
+        TypedArray questions = res.obtainTypedArray(R.array.questions);
+
+        double total = questions.length();
         double score = 0;
 
         // iterate over questions and process each
-        Resources res = getResources();
-        String[] corrects = res.getStringArray(R.array.qcorrect);
-        for (int i=1; i<=total; ++i) {
-            String question = String.format("q%d", i);
-            String answered = settings.getString(question,"opt0");
+        for (int i=0; i<total; ++i) {
+            String answered = settings.getString(String.format("q%d", i+1),"opt0");
+            String[] question = res.getStringArray(questions.getResourceId(i, -1));
 
             // TODO: add to UI
-            if (Objects.equals(corrects[i-1], answered)) {
+            if (Objects.equals(question[5], answered)) {
                 // add to score if correct
                 ++score;
             } else {

@@ -3,6 +3,8 @@ package au.id.swalladge.quiz_android;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Resources;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -32,8 +34,14 @@ public class QuizQuestion extends Activity {
     private void displayQuestion(int n) {
         questionNumber = n;
 
+
+        Resources res = getResources();
+        TypedArray questions = res.obtainTypedArray(R.array.questions);
+        String[] question = res.getStringArray(questions.getResourceId(n-1, -1));
+
         // disable/enable buttons
-        if (n == Integer.parseInt(getString(R.string.totalQuestions))) {
+        // (n indexed from 1)
+        if (n == questions.length()) {
             ((Button) findViewById(R.id.nextBtn)).setEnabled(false);
         } else {
             ((Button) findViewById(R.id.nextBtn)).setEnabled(true);
@@ -46,28 +54,21 @@ public class QuizQuestion extends Activity {
 
         // show the question number
         TextView t = (TextView) findViewById(R.id.questionNumber);
-        t.setText(String.format(getString(R.string.questionNumber), n, getString(R.string.totalQuestions)));
+        t.setText(String.format(getString(R.string.questionNumber), n, questions.length()));
 
-        String q = String.format("q%d%%s",n);
-        String questionID = String.format("q%d", n);
-        String question = getString(getResources().getIdentifier(String.format(q,""),"string", this.getPackageName()));
-        ((TextView) findViewById(R.id.qDescription)).setText(question);
+        ((TextView) findViewById(R.id.qDescription)).setText(question[0]);
 
-
-        // select the don't know option by default
-        ((RadioButton) findViewById(R.id.opt0)).setChecked(true);
-
-        // TODO: use string array in resources to optimize this
-        for (int i=1; i<5; ++i) {
+        // set text for the radio buttons
+        for (int i=1; i<=4; ++i) {
             String optID = String.format("opt%d", i);
-            String rID = String.format(q, optID);
             RadioButton r = (RadioButton) findViewById(getResources().getIdentifier(optID, "id", this.getPackageName()));
-            r.setText(getResources().getIdentifier(rID, "string", this.getPackageName()));
+            r.setText(question[i]);
             r.setChecked(false);
-
         }
+
+        // check either saved option or don't know
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        RadioButton r = (RadioButton) findViewById(getResources().getIdentifier(settings.getString(questionID, "opt0"), "id", this.getPackageName()));
+        RadioButton r = (RadioButton) findViewById(getResources().getIdentifier(settings.getString(String.format("q%d", n), "opt0"), "id", this.getPackageName()));
         r.setChecked(true);
     }
 

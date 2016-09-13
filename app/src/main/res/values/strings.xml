@@ -18,22 +18,29 @@
     <string name="questionNumber" formatted="false">Question %s/%s</string>
 
     <!-- quiz information and questions -->
-    <string name="totalQuestions">2</string>
-    <string name="q1">What is the capital city of Ghana?</string>
-    <string name="q1opt1">Abzurbistan</string>
-    <string name="q1opt2">Accra</string>
-    <string name="q1opt3">Avalon</string>
-    <string name="q1opt4">Attleboro</string>
 
-    <string name="q2">What is the capital city of Greece?</string>
-    <string name="q2opt1">Vienna</string>
-    <string name="q2opt2">Volos</string>
-    <string name="q2opt3">Athens</string>
-    <string name="q2opt4">Sparta</string>
-
-    <string-array name="qcorrect">
-        <item>opt2</item>
+    <!-- question array has 5 fields: 0 = description, 1-4 = options 1-4, 5 = correct option number -->
+    <string-array name="q1">
+        <item>What is the capital city of Greece?</item>
+        <item>Vienna</item>
+        <item>Volos</item>
+        <item>Athens</item>
+        <item>Sparta</item>
         <item>opt3</item>
     </string-array>
+
+    <string-array name="q2">
+        <item>What is the capital city of Ghana?</item>
+        <item>Abzurbistan</item>
+        <item>Accra</item>
+        <item>Avalon</item>
+        <item>Attleboro</item>
+        <item>opt2</item>
+    </string-array>
+
+    <array name="questions">
+        <item>@array/q1</item>
+        <item>@array/q2</item>
+    </array>
 
 </resources>
