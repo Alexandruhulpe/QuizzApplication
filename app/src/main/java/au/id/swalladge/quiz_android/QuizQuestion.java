@@ -135,6 +135,7 @@ public class QuizQuestion extends Activity {
      * @param view
      */
     public void backToMenu(View view) {
-        finish();
+        Intent main = new Intent(this, MainActivity.class);
+        startActivity(main);
     }
 }

@@ -6,6 +6,7 @@ import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
@@ -71,7 +72,14 @@ public class QuizResults extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
-        //super.onBackPressed();
+        backToMenu(null);
+    }
+
+    /**
+     * return to the main screen
+     * @param view
+     */
+    public void backToMenu(View view) {
         Intent main = new Intent(this, MainActivity.class);
         startActivity(main);
     }
