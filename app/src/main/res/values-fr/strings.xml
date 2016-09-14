@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NextButton">Question suivant</string>
+    <string name="nextButton">Question suivant</string>
     <string name="aboutBtn">À Propos</string>
     <string name="backToMenu">Retour au menu</string>
     <string name="dontKnow">Je ne sais pas.</string>

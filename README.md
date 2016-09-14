@@ -8,7 +8,7 @@ Simple quiz app for testing your knowledge on capital cities.
 ## INFO
 
 - minimum api set is api 19 (kitkat)
-- tested on and optimuzed for api 23 (marshmallow)
+- tested on and optimized for api 23 (marshmallow)
 
 
 ## FEATURES

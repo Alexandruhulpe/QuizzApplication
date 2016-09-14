@@ -7,7 +7,7 @@
     <string name="takeQuiz">Take the Quiz!</string>
     <string name="resetQuiz">Reset Saved Answers</string>
     <string name="previousButton">Previous Question</string>
-    <string name="NextButton">Next Question</string>
+    <string name="nextButton">Next Question</string>
     <string name="submitButton">Submit Answers</string>
     <string name="dontKnow">I don\'t know.</string>
     <string name="backToMenu">Back to Menu</string>

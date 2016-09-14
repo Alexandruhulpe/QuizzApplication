@@ -97,7 +97,7 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/NextButton"
+                android:text="@string/nextButton"
                 android:id="@+id/nextBtn"
                 android:onClick="next"
                 android:backgroundTint="@color/colorPrimary" />

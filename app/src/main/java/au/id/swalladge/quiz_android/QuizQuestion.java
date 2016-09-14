@@ -14,8 +14,6 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import java.util.Objects;
-
 public class QuizQuestion extends Activity {
     int questionNumber;
     public static final String PREFS_NAME = "data";
@@ -41,13 +39,29 @@ public class QuizQuestion extends Activity {
         TypedArray questions = res.obtainTypedArray(R.array.questions);
         String[] question = res.getStringArray(questions.getResourceId(n-1, -1));
 
-        // disable/enable buttons
-        // (n indexed from 1)
+        // note - (n indexed from 1)
+        // change next question button to submit answers when on last question
         if (n == questions.length()) {
-            ((Button) findViewById(R.id.nextBtn)).setEnabled(false);
+            Button next = ((Button) findViewById(R.id.nextBtn));
+            next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    submit(v);
+                }
+            });
+            next.setText(getString(R.string.submitButton));
+
         } else {
-            ((Button) findViewById(R.id.nextBtn)).setEnabled(true);
+            Button next = ((Button) findViewById(R.id.nextBtn));
+            next.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    next(v);
+                }
+            });
+            next.setText(getString(R.string.nextButton));
         }
+        // disable previous question button if on first question
         if (n == 1) {
             ((Button) findViewById(R.id.previousBtn)).setEnabled(false);
         } else {
