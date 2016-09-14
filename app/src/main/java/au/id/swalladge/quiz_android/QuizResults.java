@@ -107,8 +107,6 @@ public class QuizResults extends AppCompatActivity {
             SharedPreferences.Editor editor = settings.edit();
             editor.putFloat("highscore", (float) score);
             editor.apply();
-        } else {
-            // TODO: no new highscore message in UI?
         }
 
     }
