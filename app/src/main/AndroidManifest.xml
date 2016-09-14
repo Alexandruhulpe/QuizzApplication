@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".QuizQuestion" />
-        <activity android:name=".QuizResults"></activity>
+        <activity android:name=".QuizResults" />
+        <activity android:name=".webpageViewer"></activity>
     </application>
 
 </manifest>

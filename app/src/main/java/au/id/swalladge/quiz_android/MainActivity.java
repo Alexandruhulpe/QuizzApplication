@@ -72,6 +72,10 @@ public class MainActivity extends Activity {
 
         // set up the data to send
         Bundle data = new Bundle();
+
+        // send the question number as the question to view first
+        //  this allows for future features like automatically jumping to
+        //  the last question the user was on previously
         data.putInt("questionNumber", 1);
 
         // make the intent
@@ -88,6 +92,8 @@ public class MainActivity extends Activity {
      */
     public void about(View view) {
         // TODO: display webview with about/readme information
+        Intent about = new Intent(this, webpageViewer.class);
+        startActivity(about);
     }
 
     /**

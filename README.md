@@ -19,3 +19,4 @@ Simple quiz app for testing your knowledge on capital cities.
 
 - webview for displaying information + links
 - more questions
+- add screenshots and more info to this readme
