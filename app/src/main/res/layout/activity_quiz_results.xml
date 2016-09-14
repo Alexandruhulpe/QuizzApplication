@@ -20,16 +20,6 @@
         android:weightSum="1">
 
         <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="@string/resultsDesc"
-            android:id="@+id/textView2"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
-            android:textAlignment="center" />
-
-        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -38,24 +28,49 @@
             android:layout_gravity="center_horizontal" />
 
         <LinearLayout
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/resultsContainer"></LinearLayout>
+            android:gravity="center_horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true">
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/backToMenu"
+                android:id="@+id/button"
+                android:backgroundTint="@color/colorPrimary"
+                android:onClick="backToMenu"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/backToMenu"
-            android:id="@+id/button"
-            android:layout_gravity="center_horizontal"
-            android:backgroundTint="@color/colorPrimary"
-            android:onClick="backToMenu"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp" />
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/resultsDesc"
+            android:id="@+id/textView2"
+            android:textAlignment="center" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fadeScrollbars="false"
+            android:id="@+id/scrollView"
+            android:scrollIndicators="right">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/resultsContainer">
+
+            </LinearLayout>
+        </ScrollView>
 
     </LinearLayout>
 

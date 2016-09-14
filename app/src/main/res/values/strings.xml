@@ -21,7 +21,7 @@
     <string name="resetHighscoreBtn">Reset Highscore</string>
     <string name="correct">Correct!</string>
     <string name="newHighscore">New Highscore!</string>
-    <string name="resultsDesc">Your score and individual question results.</string>
+    <string name="resultsDesc">Individual question results:</string>
 
     <!-- format strings for displaying scores and such -->
     <string name="resultsTitle" formatted="false">Score: %.1f%%</string>

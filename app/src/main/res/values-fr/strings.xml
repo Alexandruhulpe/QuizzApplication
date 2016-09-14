@@ -14,7 +14,7 @@
     <string name="appDesc">Évaluer vos connaissances des capitales de la monde avec ce quiz court !</string>
     <string name="appName">Le Quiz</string>
     <string name="submitConfirmMessage">Vous êtes sûr ?</string>
-    <string name="resultsDesc">Votre résultat et vos résultats pour chaque question.</string>
+    <string name="resultsDesc">Résultats pour chaque question :</string>
     <string name="resetQuiz">Remettre les réponses sauvées</string>
     <string name="newHighscore">Nouveau record !</string>
     <string name="correct">Correct !</string>
