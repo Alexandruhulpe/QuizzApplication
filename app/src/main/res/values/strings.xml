@@ -52,9 +52,29 @@
         <item>opt2</item>
     </string-array>
 
+    <string-array name="q3">
+        <item>What is the capital city of Moldova?</item>
+        <item>Durleşti</item>
+        <item>Cojuşna</item>
+        <item>Chişinău</item>
+        <item>Dragoş</item>
+        <item>opt3</item>
+    </string-array>
+
+    <string-array name="q4">
+        <item>What is the capital of Sierra Leone?</item>
+        <item>Freetown</item>
+        <item>Centerville</item>
+        <item>Chestershire</item>
+        <item>Nowhere</item>
+        <item>opt1</item>
+    </string-array>
+
     <array name="questions">
         <item>@array/q1</item>
         <item>@array/q2</item>
+        <item>@array/q3</item>
+        <item>@array/q4</item>
     </array>
 
 </resources>

@@ -47,4 +47,22 @@
         <item>opt2</item>
     </string-array>
 
+    <string-array name="q3">
+        <item>Quelle est la capitale de la Moldavie ?</item>
+        <item>Durleşti</item>
+        <item>Cojuşna</item>
+        <item>Chişinău</item>
+        <item>Dragoş</item>
+        <item>opt3</item>
+    </string-array>
+
+    <string-array name="q4">
+        <item>Quelle est la capitale de la Sierra Leone ?</item>
+        <item>Freetown</item>
+        <item>Centerville</item>
+        <item>Chestershire</item>
+        <item>Nowhere</item>
+        <item>opt1</item>
+    </string-array>
+
 </resources>
