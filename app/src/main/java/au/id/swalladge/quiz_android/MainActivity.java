@@ -96,7 +96,7 @@ public class MainActivity extends Activity {
 
         // add the url to load
         Bundle data = new Bundle();
-        data.putString("url", "file:///android_asset/about.html");
+        data.putString("url", getString(R.string.aboutFile));
         about.putExtras(data);
 
         // start!

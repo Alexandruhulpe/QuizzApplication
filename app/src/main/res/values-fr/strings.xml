@@ -64,5 +64,6 @@
         <item>Nowhere</item>
         <item>opt1</item>
     </string-array>
+    <string name="aboutFile">file:///android_asset/about-fr.html</string>
 
 </resources>
