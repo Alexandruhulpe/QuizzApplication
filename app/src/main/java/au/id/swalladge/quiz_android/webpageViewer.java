@@ -13,7 +13,9 @@ public class webpageViewer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_webviewer);
 
-        loadWebView("file:///android_asset/about.html");
+        Bundle data = this.getIntent().getExtras();
+        String url = data.getString("url");
+        loadWebView(url);
     }
 
     /**

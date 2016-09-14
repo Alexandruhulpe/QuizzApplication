@@ -91,8 +91,15 @@ public class MainActivity extends Activity {
      * @param view
      */
     public void about(View view) {
-        // TODO: display webview with about/readme information
+        // new intent for the webpage viewer activity
         Intent about = new Intent(this, webpageViewer.class);
+
+        // add the url to load
+        Bundle data = new Bundle();
+        data.putString("url", "file:///android_asset/about.html");
+        about.putExtras(data);
+
+        // start!
         startActivity(about);
     }
 
