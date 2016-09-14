@@ -97,19 +97,22 @@
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/submitButton"
-                android:id="@+id/submitBtn"
-                android:onClick="submit"
-                android:backgroundTint="@color/colorPrimary" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:text="@string/NextButton"
                 android:id="@+id/nextBtn"
                 android:onClick="next"
                 android:backgroundTint="@color/colorPrimary" />
         </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true">
 
         <Button
             style="?android:attr/buttonStyleSmall"
@@ -117,9 +120,16 @@
             android:layout_height="wrap_content"
             android:text="@string/backToMenu"
             android:id="@+id/backtomenu"
-            android:layout_gravity="center_horizontal"
             android:backgroundTint="@color/colorPrimary"
             android:onClick="backToMenu" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submitButton"
+            android:id="@+id/button3"
+            android:onClick="submit"
+            android:backgroundTint="@color/colorPrimary" />
 
     </LinearLayout>
 </RelativeLayout>

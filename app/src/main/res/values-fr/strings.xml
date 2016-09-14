@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="NextButton">Suivant</string>
+    <string name="NextButton">Question suivant</string>
     <string name="aboutBtn">À Propos</string>
     <string name="backToMenu">Retour au menu</string>
     <string name="dontKnow">Je ne sais pas.</string>
-    <string name="submitButton">Soumettre</string>
+    <string name="submitButton">Soumettre les réponses</string>
     <string name="submitConfirmTitle">Confirmer la remise</string>
     <string name="resetHighConfirmTitle">Remettre le record</string>
     <string name="resetHighscoreBtn">Remettre le record</string>
     <string name="takeQuiz">Commencer le Quiz !</string>
     <string name="title">Le Quiz</string>
-    <string name="previousButton">Avant</string>
+    <string name="previousButton">Question précédent</string>
     <string name="appDesc">Évaluer vos connaissances des capitales de la monde avec ce quiz court !</string>
     <string name="appName">Le Quiz</string>
     <string name="submitConfirmMessage">Vous êtes sûr ?</string>

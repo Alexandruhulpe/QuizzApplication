@@ -6,9 +6,9 @@
     <string name="appDesc">Test your knowledge of the World\'s capital cities with this short quiz!</string>
     <string name="takeQuiz">Take the Quiz!</string>
     <string name="resetQuiz">Reset Saved Answers</string>
-    <string name="previousButton">Previous</string>
-    <string name="NextButton">Next</string>
-    <string name="submitButton">Submit</string>
+    <string name="previousButton">Previous Question</string>
+    <string name="NextButton">Next Question</string>
+    <string name="submitButton">Submit Answers</string>
     <string name="dontKnow">I don\'t know.</string>
     <string name="backToMenu">Back to Menu</string>
     <string name="submitConfirmTitle">Confirm Submission</string>
