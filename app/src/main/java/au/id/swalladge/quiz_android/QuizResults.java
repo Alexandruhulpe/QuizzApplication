@@ -117,6 +117,7 @@ public class QuizResults extends AppCompatActivity {
      */
     @Override
     public void onBackPressed() {
+        finish();
         backToMenu(null);
     }
 

@@ -128,4 +128,16 @@ public class MainActivity extends Activity {
                 .setNegativeButton(android.R.string.no, null)
                 .show();
     }
+
+    /**
+     * Override back button so we don't have strange results
+     * - back should return to android home screen
+     */
+    @Override
+    public void onBackPressed() {
+        // thanks to http://stackoverflow.com/a/5901270/3089519 for how to do this
+        Intent homeScreen = new Intent(Intent.ACTION_MAIN);
+        homeScreen.addCategory(Intent.CATEGORY_HOME);
+        startActivity(homeScreen);
+    }
 }

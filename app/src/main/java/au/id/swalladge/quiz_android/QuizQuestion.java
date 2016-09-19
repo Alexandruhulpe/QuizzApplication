@@ -14,8 +14,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.Stack;
+
 public class QuizQuestion extends Activity {
     int questionNumber;
+    Stack<Integer> previousQuestions = new Stack<Integer>();
     public static final String PREFS_NAME = "data";
 
     @Override
@@ -105,6 +108,7 @@ public class QuizQuestion extends Activity {
      * @param view
      */
     public void previous(View view) {
+        previousQuestions.push(questionNumber);
         saveAnswer(questionNumber);
         displayQuestion(questionNumber-1);
     }
@@ -114,6 +118,7 @@ public class QuizQuestion extends Activity {
      * @param view
      */
     public void next(View view) {
+        previousQuestions.push(questionNumber);
         saveAnswer(questionNumber);
         displayQuestion(questionNumber+1);
     }
@@ -151,4 +156,19 @@ public class QuizQuestion extends Activity {
         Intent main = new Intent(this, MainActivity.class);
         startActivity(main);
     }
-}
+
+    /**
+     * override back button to work with how questions are displayed
+     */
+    @Override
+    public void onBackPressed() {
+        if (!previousQuestions.empty()) {
+            int previous = previousQuestions.pop();
+            saveAnswer(questionNumber);
+            displayQuestion(previous);
+        } else {
+            backToMenu(null);
+        }
+    }
+
+    }
