@@ -28,14 +28,41 @@ Extra features:
 
 - stores the highscore (Beat your previous score! Compete with your friends!)
 - back button overridden where required to make it more useful within the app
+- custom launcher icon with support for a range of different dpi
+- confirmation dialogs for major actions (reset answers, submit quiz, etc.)
 - full localization support with use of resources (for strings, images, and files)
 - French translation included
 
 ## TODO
 
 - more questions
-- add screenshots and more info to this readme
-- French translation of about page
+
+## SCREENSHOTS
+
+### Main activity
+
+![main activity in english](screenshots/main-en.png)
+
+### Also with landscape
+
+![landscape main activity](screenshots/main-landscape-en.png)
+
+### And main activity in French
+
+![main activity in french](screenshots/main-fr.png)
+
+### About view
+
+![about page in english](screenshots/about-en.png)
+
+### Question view (French)
+
+![question page in french](screenshots/question-fr.png)
+
+### With warning dialogs when needed
+
+![confirm dialog on reset](screenshots/dialog-en.png)
+
 
 ## LICENSE
 
