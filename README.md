@@ -17,7 +17,7 @@ Within scope:
 
 - contains a banner image on the main activity to announce itself
 - ability to reset your saved answers and highscore
-- contains XX questions
+- contains XX questions (TODO)
 - automatically saves answers while taking the quiz for resuming later
 - results screen gives feedback on individual answers (including showing correct answer in cases where you gave the wrong answer)
 - counts and displays your score (percentage of correct answers)
@@ -41,27 +41,27 @@ Extra features:
 
 ### Main activity
 
-![main activity in english](screenshots/main-en.png)
+<img alt="main activity in english" src="screenshots/main-en.png" width="400px" />
 
 ### Also with landscape
 
-![landscape main activity](screenshots/main-landscape-en.png)
+<img alt="landscape main activity" src="screenshots/main-landscape-en.png" height="400px" />
 
 ### And main activity in French
 
-![main activity in french](screenshots/main-fr.png)
+<img alt="main activity in french" src="screenshots/main-fr.png" width="400px" />
 
 ### About view
 
-![about page in english](screenshots/about-en.png)
+<img alt="about page in english" src="screenshots/about-en.png" width="400px" />
 
 ### Question view (French)
 
-![question page in french](screenshots/question-fr.png)
+<img alt="question page in french" src="screenshots/question-fr.png" width="400px" />
 
 ### With warning dialogs when needed
 
-![confirm dialog on reset](screenshots/dialog-en.png)
+<img alt="confirm dialog on reset" src="screenshots/dialog-en.png" width="400px" />
 
 
 ## LICENSE
