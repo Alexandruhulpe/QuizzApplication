@@ -25,7 +25,9 @@
             android:id="@+id/imageView"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/banner"
-            android:contentDescription="@string/title" />
+            android:contentDescription="@string/title"
+            android:adjustViewBounds="true"
+            android:maxWidth="300dp" />
 
         <TextView
             android:layout_width="match_parent"

@@ -10,100 +10,111 @@
     tools:context="au.id.swalladge.quiz_android.QuizQuestion"
     android:background="@color/colorAccent">
 
-    <LinearLayout
-        android:orientation="vertical"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:weightSum="1">
+        android:id="@+id/scrollView2"
+        android:layout_gravity="center_horizontal"
+        android:fadeScrollbars="false"
+        android:scrollIndicators="right"
+        android:layout_above="@+id/linearLayout3">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:id="@+id/questionNumber"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="10dp"
-            android:text="@string/questionNumber" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="question description placeholder"
-            android:id="@+id/qDescription"
-            android:layout_gravity="center_horizontal"
-            android:paddingBottom="20dp" />
-
-        <RadioGroup
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
-            android:id="@+id/options">
-        <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/opt1"
-            android:buttonTint="@color/colorPrimaryDark" />
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:weightSum="1"
+            android:layout_above="@+id/linearLayout3">
 
-        <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/opt2"
-            android:buttonTint="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:id="@+id/questionNumber"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="10dp"
+                android:text="@string/questionNumber" />
 
-        <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="New RadioButton"
-            android:id="@+id/opt3"
-            android:buttonTint="@color/colorPrimaryDark" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="question description placeholder"
+                android:id="@+id/qDescription"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="20dp" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:id="@+id/options">
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New RadioButton"
+                android:id="@+id/opt1"
+                android:buttonTint="@color/colorPrimaryDark" />
 
             <RadioButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="New RadioButton"
-                android:id="@+id/opt4"
-                android:backgroundTint="@color/colorPrimaryDark"
+                android:id="@+id/opt2"
                 android:buttonTint="@color/colorPrimaryDark" />
 
             <RadioButton
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/dontKnow"
-            android:id="@+id/opt0"
-            android:checked="true"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New RadioButton"
+                android:id="@+id/opt3"
                 android:buttonTint="@color/colorPrimaryDark" />
-</RadioGroup>
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:gravity="center">
 
-            <Button
-                android:layout_width="wrap_content"
+                <RadioButton
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="New RadioButton"
+                    android:id="@+id/opt4"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:buttonTint="@color/colorPrimaryDark" />
+
+                <RadioButton
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/previousButton"
-                android:id="@+id/previousBtn"
+                android:text="@string/dontKnow"
+                android:id="@+id/opt0"
+                android:checked="true"
+                    android:buttonTint="@color/colorPrimaryDark" />
+    </RadioGroup>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:onClick="previous"
-                android:backgroundTint="@color/colorPrimary" />
+                android:gravity="center">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/nextButton"
-                android:id="@+id/nextBtn"
-                android:onClick="next"
-                android:backgroundTint="@color/colorPrimary" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/previousButton"
+                    android:id="@+id/previousBtn"
+                    android:layout_gravity="center_horizontal"
+                    android:onClick="previous"
+                    android:backgroundTint="@color/colorPrimary" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nextButton"
+                    android:id="@+id/nextBtn"
+                    android:onClick="next"
+                    android:backgroundTint="@color/colorPrimary" />
+            </LinearLayout>
+
         </LinearLayout>
-
-    </LinearLayout>
+    </ScrollView>
 
     <LinearLayout
         android:orientation="horizontal"
@@ -111,6 +122,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:gravity="center"
+        android:id="@+id/linearLayout3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true">
 
@@ -132,4 +144,5 @@
             android:backgroundTint="@color/colorPrimary" />
 
     </LinearLayout>
+
 </RelativeLayout>
