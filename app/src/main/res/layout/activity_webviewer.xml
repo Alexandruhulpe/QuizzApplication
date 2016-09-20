@@ -18,11 +18,9 @@
 
         <WebView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:id="@+id/theWebView"
-            android:layout_alignParentEnd="true"
             android:layout_weight="1"
-            android:nestedScrollingEnabled="false"
             android:fadeScrollbars="false"
             android:scrollIndicators="right" />
 
@@ -31,9 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:id="@+id/linearLayout"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true">
+            android:id="@+id/linearLayout">
 
             <Button
                 style="?android:attr/buttonStyleSmall"
@@ -42,9 +38,7 @@
                 android:text="@string/backToMenu"
                 android:id="@+id/button2"
                 android:backgroundTint="@color/colorPrimary"
-                android:onClick="backToMenu"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:onClick="backToMenu" />
         </LinearLayout>
 
     </LinearLayout>

@@ -2,22 +2,23 @@
 
 ## Copyright © 2016 Samuel Walladge
 
-Simple quiz app for testing your knowledge on capital cities.
+Simple native android quiz app for testing your knowledge on capital cities.
 
 
 ## INFO
 
-- minimum api set is api 19 (kitkat)
-- tested on and optimized for api 23 (marshmallow)
+- the app has been developed using Android Studio
+- minimum api set is api 19 (kitkat), although looks best on api 21 (lollipop) and higher due to extra styles available
+- source code available on GitHub at [swalladge/quiz-android](https://github.com/swalladge/quiz-android)
 
 
 ## FEATURES
 
-Within scope:
+Within original requirements:
 
 - contains a banner image on the main activity to announce itself
 - ability to reset your saved answers and highscore
-- contains XX questions (TODO)
+- contains 15 questions
 - automatically saves answers while taking the quiz for resuming later
 - results screen gives feedback on individual answers (including showing correct answer in cases where you gave the wrong answer)
 - counts and displays your score (percentage of correct answers)

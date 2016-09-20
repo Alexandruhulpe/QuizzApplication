@@ -101,7 +101,6 @@
             android:layout_height="wrap_content"
             android:text="@string/resetQuiz"
             android:id="@+id/resetQuizButton"
-            android:nestedScrollingEnabled="false"
             android:onClick="resetAnswers"
             android:backgroundTint="@color/colorPrimary" />
     </LinearLayout>

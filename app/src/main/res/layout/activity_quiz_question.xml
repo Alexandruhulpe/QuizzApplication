@@ -23,10 +23,7 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:weightSum="1"
-            android:layout_above="@+id/linearLayout3">
+            android:weightSum="1">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -41,7 +38,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="question description placeholder"
+                android:text="@string/dontKnow"
                 android:id="@+id/qDescription"
                 android:layout_gravity="center_horizontal"
                 android:paddingBottom="20dp" />
@@ -72,21 +69,21 @@
                 android:id="@+id/opt3"
                 android:buttonTint="@color/colorPrimaryDark" />
 
-                <RadioButton
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:text="New RadioButton"
-                    android:id="@+id/opt4"
-                    android:backgroundTint="@color/colorPrimaryDark"
-                    android:buttonTint="@color/colorPrimaryDark" />
+            <RadioButton
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="New RadioButton"
+                android:id="@+id/opt4"
+                android:backgroundTint="@color/colorPrimaryDark"
+                android:buttonTint="@color/colorPrimaryDark" />
 
-                <RadioButton
+            <RadioButton
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/dontKnow"
                 android:id="@+id/opt0"
                 android:checked="true"
-                    android:buttonTint="@color/colorPrimaryDark" />
+                android:buttonTint="@color/colorPrimaryDark" />
     </RadioGroup>
             <LinearLayout
                 android:orientation="horizontal"
