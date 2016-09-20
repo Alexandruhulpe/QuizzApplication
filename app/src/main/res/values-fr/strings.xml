@@ -21,6 +21,7 @@
     <string name="resetHighConfirmMessage">Vraiment remettre le record ?</string>
     <string name="resetAnsConfirmTitle">Remettre les réponses sauvées</string>
     <string name="resetAnsConfirmMessage">Vraiment remettre vos réponses sauvées ?</string>
+    <string name="aboutFile">file:///android_asset/about-fr.html</string>
 
     <string formatted="false" name="highscore">Record : %.1f%%</string>
     <string formatted="false" name="incorrect">La bonne réponse : %s</string>
@@ -64,6 +65,104 @@
         <item>Nowhere</item>
         <item>opt1</item>
     </string-array>
-    <string name="aboutFile">file:///android_asset/about-fr.html</string>
+
+    <string-array name="q5">
+        <item>La capitale du Bélize est … ?</item>
+        <item>San Ignacio</item>
+        <item>Belissimo</item>
+        <item>Ville de Belize</item>
+        <item>Belmopan</item>
+        <item>opt4</item>
+    </string-array>
+
+    <string-array name="q6">
+        <item>Quelle est la capitale du Qatar ?</item>
+        <item>Doha</item>
+        <item>Mesaieed</item>
+        <item>Ancien Aéroport</item>
+        <item>Dakar</item>
+        <item>opt1</item>
+    </string-array>
+
+    <string-array name="q7">
+        <item>Quelle est la capitale de l\'Islande ?</item>
+        <item>Njarõvík</item>
+        <item>Kópavogur</item>
+        <item>Reykjavík</item>
+        <item>Mosfellsbær</item>
+        <item>opt3</item>
+    </string-array>
+
+    <string-array name="q8">
+        <item>La capitale de la Vanuatu est … ?</item>
+        <item>Whitesands</item>
+        <item>Lamap</item>
+        <item>Sulphur Bay</item>
+        <item>Port-Vila</item>
+        <item>opt4</item>
+    </string-array>
+
+    <string-array name="q9">
+        <item>Quelle est la capitale de les Philippines ?</item>
+        <item>Manille</item>
+        <item>Caloocan</item>
+        <item>Cagayan de Oro</item>
+        <item>Taguig</item>
+        <item>opt1</item>
+    </string-array>
+
+    <string-array name="q10">
+        <item>La capitale du Maroc est … ?</item>
+        <item>Rabat</item>
+        <item>Salé</item>
+        <item>Casablanca</item>
+        <item>Fez</item>
+        <item>opt1</item>
+    </string-array>
+
+    <string-array name="q11">
+        <item>Quelle est la capitale du Népal ?</item>
+        <item>Bhaktapur</item>
+        <item>Kathmandu</item>
+        <item>Dharan</item>
+        <item>Pokhara</item>
+        <item>opt2</item>
+    </string-array>
+
+    <string-array name="q12">
+        <item>Quelle est la capitale du Kenya ?</item>
+        <item>Hakuna Matata</item>
+        <item>Mombasa</item>
+        <item>Kilwa</item>
+        <item>Nairobi</item>
+        <item>opt4</item>
+    </string-array>
+
+    <string-array name="q13">
+        <item>Quelle est la capitale de l\'Estonie ?</item>
+        <item>Nõmme</item>
+        <item>Tallinn</item>
+        <item>Haabersti</item>
+        <item>Pirita</item>
+        <item>opt2</item>
+    </string-array>
+
+    <string-array name="q14">
+        <item>Quelle est la capitale de la Colombie ?</item>
+        <item>El Totumo</item>
+        <item>Cundinamarca</item>
+        <item>Bogota</item>
+        <item>San Andrés</item>
+        <item>opt3</item>
+    </string-array>
+
+    <string-array name="q15">
+        <item>Quelle est la capitale du Lesotho ?</item>
+        <item>Maseru</item>
+        <item>Sesotho</item>
+        <item>Basotho</item>
+        <item>Bosiu</item>
+        <item>opt1</item>
+    </string-array>
 
 </resources>

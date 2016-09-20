@@ -33,9 +33,6 @@ Extra features:
 - full localization support with use of resources (for strings, images, and files)
 - French translation included
 
-## TODO
-
-- more questions
 
 ## SCREENSHOTS
 
